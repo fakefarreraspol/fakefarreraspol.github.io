@@ -8,6 +8,22 @@
     font-family: quirky;
     src: url(Images/QuirkyRobot.ttf);
 }
+@font-face {
+    font-family: actionman;
+    src: url(Images/Action_Man.ttf);
+}
+@font-face {
+    font-family: actionmanshaded;
+    src: url(Images/Action_Man_Shaded.ttf);
+}
+@font-face {
+    font-family: cartoon;
+    src: url(Images/SF_Cartoonist_Hand_SC_Bold.ttf);
+}
+p{
+    font-family: "actionman";
+}
+
 body{
     background: #080808;
     color: #fff; 
@@ -53,6 +69,7 @@ nav ul li a
     text-decoration: none;
     font-size: 18px;
     position: relative;
+    font-family: 'actionman';
 }
 
 nav ul li a::after
@@ -91,8 +108,13 @@ nav ul li a:hover::after
     background-image: url();
     font-size: 60px;
     margin-top: 5px;
+    font-family: 'cartoon';
 }
-
+.header-text h2{
+    font-size: 40px;
+    margin-top: 5px;
+    font-family: 'cartoon';
+}
 .header-text h1 span{
     color: #00ffb0;
     font-size: 90px;
@@ -173,6 +195,7 @@ nav ul li a:hover::after
 
 .tab-contents ul li 
 {
+    font-family: 'actionman';
     list-style: none;
     margin: 10px;
 
@@ -180,6 +203,7 @@ nav ul li a:hover::after
 
 .tab-contents ul li span
 {
+    font-family: 'cartoon';
     color: #ff004f;
     font-size: 20px;
     
@@ -236,8 +260,12 @@ nav ul li a:hover::after
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
+    font-family: 'cartoon';
+    letter-spacing: 2px;
 }
-
+.services-list div p{
+    font-size: 15px;
+}
 .services-list div a{
     text-decoration: none;
     color: #ffff;
@@ -301,6 +329,7 @@ nav ul li a:hover::after
 }
 .layer h3
 {
+    font-family: 'actionmanshaded';
     font-weight: 500;
     margin-bottom: 20px;
     font-size: 30px;
@@ -358,6 +387,10 @@ label
     transition: background 0.5s;
     cursor: pointer;
 
+}
+
+label div{
+    font-family: 'cartoon';
 }
 
 label:hover
