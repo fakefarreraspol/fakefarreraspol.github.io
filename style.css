@@ -116,7 +116,7 @@ nav ul li a:hover::after
     font-family: 'cartoon';
 }
 .header-text h1 span{
-    color: #00ffb0;
+    font-family: 'cartoon';
     font-size: 90px;
 }
 
