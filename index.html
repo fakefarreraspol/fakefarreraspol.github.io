@@ -1,160 +1,292 @@
-<!DOCTYPE HTML>
-<!--
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Pol Farreras Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
 
-		<!-- Header -->
-			<div id="header">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pol Farreras Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d38bff0e92.js" crossorigin="anonymous"></script>
+</head>
 
-				<div class="top">
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Portfolio</a></li>
+                    <li><a href="">Contact</a></li>
 
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
-							<h1 id="title">Pol Farreras</h1>
-							<p>Game Developer</p>
-						</div>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Game Developer</p>
+                <h1>Hi, I'm <span>Pol Farreras</span></span><br>Also Known As fakefarreraspol</h1>
+            </div>
+        </div>
+    </div>
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-								
-							</ul>
-						</nav>
+    <!---------------About------------------------->
 
-				</div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/PolFarreras.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="hola"> AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA </p>
 
-				<div class="bottom">
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Game</span><br>Development</li>
+                            <li><span>Game</span><br>Development</li>
+                            <li><span>Game</span><br>Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>SGame</span><br>Development</li>
+                            <li><span>Game</span><br>Development</li>
+                            <li><span>Game</span><br>Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>XGame</span><br>Development</li>
+                            <li><span>Game</span><br>Development</li>
+                            <li><span>Game</span><br>Development</li>
+                        </ul>
+                    </div>
+                </div>
 
-					<!-- Social Icons -->
-						<ul class="icons">
-							<!--<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>-->
-							<!--<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>-->
-							<li><a href="https://github.com/fakefarreraspol" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<!--<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>-->
-							<!--<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>-->
-							<li><a href="https://www.linkedin.com/in/pol-farreras-olivera-10263b219/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						</ul>
+            </div>
+        </div>
+    </div>
 
-				</div>
+    <!-- -------services------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Portfolio</h1>
+            <div class="services-list">
+                <div class="service-element" onclick="openportfolio('game-dev')">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Game Dev</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, exercitationem.</p>
 
-			</div>
+                </div>
+                <div class="service-element" onclick="openportfolio('game-design')">
+                    <i class="fa-solid fa-puzzle-piece"></i>
+                    <h2>Game Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, exercitationem.</p>
 
-		<!-- Main -->
-			<div id="main">
+                </div>
+                <div class="service-element" onclick="openportfolio('game-art')">
+                    <i class="fa-solid fa-paint-roller"></i>
+                    <h2>Game Art</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, exercitationem.</p>
 
-				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						<div class="container">
+                </div>
+                <div class="service-element" onclick="openportfolio('game-jam')">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <h2>Game Jams</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, exercitationem.</p>
 
-							<header>
-								<h2 class="alt">Hi! I'm <strong>Pol</strong></h2>
-							</header>
+                </div>
+                <div class="service-element active-portfolio-tab" onclick="openportfolio('game-all')">
+                    <i class="fa-solid fa-globe"></i>
+                    <h2>All</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, exercitationem.</p>
 
-							
+                </div>
 
-						</div>
-					</section>
+            </div>
+        </div>
 
-				<!-- Portfolio -->
-					<section id="portfolio" class="two">
-						<div class="container">
 
-							<header>
-								<h2>Portfolio</h2>
-							</header>
 
-							<p>I have participated in many projects, here are some of them. </p>
 
-							<div class="row">
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="https://www.youtube.com/embed/dMSLt-I5pPY" class="image fit"><img src="images/capyverse.jpg" alt="" /></a>
-										<header>
-											<h3>Into the Capyverse</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="https://farreraspol.itch.io/the-drug-guy" class="image fit"><img src="images/IndieDevDayInvisible.png" alt="" /></a>
-										<header>
-											<h3>IndieDevDay Invisible</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="https://github.com/fakefarreraspol/zeroptodaltido-Platformer" class="image fit"><img src="images/monkeyquest.jpg" alt="" /></a>
-										<header>
-											<h3>Monkey Quest</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="https://farreraspol.itch.io/capybarastudios" class="image fit"><img src="images/cranedestroyer.png" alt="" /></a>
-										<header>
-											<h3>CITM GameJam</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="https://github.com/fakefarreraspol/TheScytheBehindTheDoor" class="image fit"><img src="images/rpg.jpg" alt="" /></a>
-										<header>
-											<h3>Game Design RPG</h3>
-										</header>
-									</article>
-									
-								</div>
-							</div>
+        <!-- portfolio -->
+        <div id="portfolio">
+            <div class="container">
 
-						</div>
-					</section>
+                <input id="ch" type="checkbox">
+                <div class="work-list">
 
-				<!-- About Me -->
-					<section id="about" class="three">
-						<div class="container">
+                    <div class="work game-art active-portfolio">
+                        <a href="#"><img src="Images/GuardiansOfTheGalaxy.png " alt=""></i></a>
+                        <div class="layer">
+                            <h3>Guardians of the Galaxy: Battle for the Universe</h3>
+                            <p>CITM Project 3 game where I was in charge of everything related to the environments</p>
 
-							<header>
-								<h2>About Me</h2>
-							</header>
+                        </div>
+                    </div>
+                    <div class="work game-design game-dev active-portfolio">
+                        <img src="Images/ShadowStreet.gif " alt=""></i>
+                        <a href="https://github.com/fakefarreraspol/ShadowStreet">
+                            <div class="layer">
+                                <h3>Shadow Street</h3>
+                                <p>VR Game made with unity</p>
 
-							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+                            </div>
 
-							<p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus
-							ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae
-							laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem
-							parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper
-							dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec
-							ornare iaculis.</p>
+                        </a>
 
-						</div>
-					</section>
+                    </div>
+                    <div class="work game-design active-portfolio">
+                        <img src="Images/BackonBacklog.png " alt=""></i>
+                        <a href="https://drive.google.com/file/d/1r3h4k0AWlsBiza0ENjfoRF2ouN-zM2IA/view">
+                            <div class="layer">
+                                <h3>Backon Backlog</h3>
+                                <p>Design concept of a Gamified App. The App main goals are: keep track of the games the
+                                    user play,
+                                    incentivize them to play new games and help the users finish a game. </p>
 
-				
-			</div>
+                            </div>
+                        </a>
+                    </div>
 
-		
+                    <div class="work game-jam active-portfolio">
+                        <div class="older-work">
+                            <img src="Images/TheDrugGuy.png " alt=""></i>
+                            <a href="https://farreraspol.itch.io/the-drug-guy">
+                                <div class="layer">
+                                    <h3>The Drug Guy</h3>
+                                    <p>An arcade game made for the DevInvisible "GameJam" that we couldn't finish
+                                        because of
+                                        time.
+                                    </p>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="work game-design active-portfolio ">
+                        <div class="older-work">
+                            <img src="Images/KayasQuest.png " alt=""></i>
+                            <a href="https://farreraspol.itch.io/the-drug-guy">
+                                <div class="layer">
+                                    <h3>Kaya's Quest</h3>
+                                    <p>A small RPG game made with RPG Maker VX ACE for Game Design 2 class.
+                                    </p>
 
-	</body>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="work game-design game-dev active-portfolio ">
+                        <div class="older-work">
+                            <img src="Images/IntoTheCapyverse.gif" alt=""></i>
+                            <a href="">
+                                <div class="layer">
+                                    <h3>Into The Capyverse</h3>
+                                    <p>CITM Project 2 RPG Game
+                                    </p>
+
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+                <label for="ch">
+                    <div class="button01">
+                        Show More
+                    </div>
+                    <div class="button02">
+                        Show Less
+                    </div>
+                </label>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var gamedevlinks = document.getElementsByClassName("game-dev");
+        var gamedesignlinks = document.getElementsByClassName("game-design");
+        var gameartlinks = document.getElementsByClassName("game-art");
+        var gamejamlinks = document.getElementsByClassName("game-jam");
+
+        var serviceelement = document.getElementsByClassName("service-element");
+
+        function openportfolio(portfolioname) {
+
+            for (svelement of serviceelement) {
+                svelement.classList.remove("active-portfolio-tab");
+            }
+            event.currentTarget.classList.add("active-portfolio-tab");
+
+            for (gamedevlink of gamedevlinks) {
+                gamedevlink.classList.remove("active-portfolio");
+            }
+            for (gamedesignlink of gamedesignlinks) {
+                gamedesignlink.classList.remove("active-portfolio");
+            }
+            for (gameartlink of gameartlinks) {
+                gameartlink.classList.remove("active-portfolio");
+            }
+            for (gamejamlink of gamejamlinks) {
+                gamejamlink.classList.remove("active-portfolio");
+            }
+
+            if (portfolioname == "game-all") {
+                for (gamedevlink of gamedevlinks) {
+                    gamedevlink.classList.add("active-portfolio");
+                }
+                for (gamedesignlink of gamedesignlinks) {
+                    gamedesignlink.classList.add("active-portfolio");
+                }
+                for (gameartlink of gameartlinks) {
+                    gameartlink.classList.add("active-portfolio");
+                }
+                for (gamejamlink of gamejamlinks) {
+                    gamejamlink.classList.add("active-portfolio");
+                }
+            }
+            else {
+                for (element of document.getElementsByClassName(portfolioname)) {
+                    element.classList.add("active-portfolio");
+                }
+            }
+        }
+
+    </script>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+    </script>
+
+</body>
+
 </html>
