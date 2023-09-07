@@ -469,3 +469,9 @@ label .button02
     text-align: center;
     padding-bottom: 20px;
 }
+
+
+label a
+{
+    color: #ff004f;
+}
