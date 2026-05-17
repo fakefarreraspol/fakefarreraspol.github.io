@@ -11,11 +11,11 @@ interface Props {
 }
 
 const {
-  email = "alex@example.com",
+  email = "farreraspol@hotmail.com",
   socials = [
-    { name: "GitHub", url: "https://github.com", icon: "github" },
-    { name: "LinkedIn", url: "https://linkedin.com", icon: "linkedin" },
-    { name: "Twitter", url: "https://twitter.com", icon: "twitter" }
+    { name: "GitHub", url: "https://github.com/fakefarreraspol", icon: "github" },
+    { name: "LinkedIn", url: "https://linkedin.com/in/farreraspol", icon: "linkedin" },
+    //{ name: "Twitter", url: "https://twitter.com", icon: "twitter" }
   ]
 }: Props = Astro.props;
 ---
@@ -62,15 +62,6 @@ const {
           </span>
         </a>
       ))}
-    </div>
-
-    <div class="text-center">
-      <p class="text-gray-500 text-sm font-mono">
-        Built with Astro & Tailwind CSS
-      </p>
-      <p class="text-gray-600 text-xs mt-2">
-        &copy; {new Date().getFullYear()} Alex Rivera
-      </p>
     </div>
   </div>
 </footer>
