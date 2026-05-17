@@ -1,23 +1,86 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = "Alex Rivera | Junior Software Engineer", description = "Portfolio of Alex Rivera - Junior Software Engineer" } = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sora:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#0A0E17] text-gray-200 font-sans antialiased">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0A0E17]/80 backdrop-blur-md border-b border-gray-800/50">
+      <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="/" class="font-mono text-cyan-400 font-medium hover:text-cyan-300 transition-colors">
+          &lt;AR /&gt;
+        </a>
+        <div class="flex items-center gap-8">
+          <a href="#about" class="text-sm text-gray-400 hover:text-cyan-400 transition-colors">About</a>
+          <a href="#skills" class="text-sm text-gray-400 hover:text-cyan-400 transition-colors">Skills</a>
+          <a href="#projects" class="text-sm text-gray-400 hover:text-cyan-400 transition-colors">Projects</a>
+          <a href="#experience" class="text-sm text-gray-400 hover:text-cyan-400 transition-colors">Experience</a>
+          <a href="#contact" class="text-sm px-4 py-2 border border-cyan-400/50 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-16">
+      <slot />
+    </main>
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora', sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  ::selection {
+    background-color: rgba(34, 211, 238, 0.3);
+    color: white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0A0E17;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #1E293B;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+  }
 </style>

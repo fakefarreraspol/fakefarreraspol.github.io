@@ -1,0 +1,86 @@
+---
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  link: string;
+}
+
+interface Props {
+  projects?: Project[];
+}
+
+const {
+  projects = [
+    {
+      title: "Task Manager App",
+      description: "A full-stack task management application with user authentication, drag-and-drop functionality, and real-time updates. Built with React and Node.js.",
+      image: "/project1.jpg",
+      tags: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
+      link: "#"
+    },
+    {
+      title: "Weather Dashboard",
+      description: "A weather application that displays current conditions and forecasts using external APIs. Features include location search and responsive design.",
+      image: "/project2.jpg",
+      tags: ["JavaScript", "API", "CSS3", "HTML5"],
+      link: "#"
+    },
+    {
+      title: "E-Commerce Platform",
+      description: "A mini e-commerce site with product listings, shopping cart functionality, and checkout process. Developed during a hackathon.",
+      image: "/project3.jpg",
+      tags: ["React", "Firebase", "Stripe", "Tailwind"],
+      link: "#"
+    }
+  ]
+}: Props = Astro.props;
+---
+
+<section id="projects" class="py-24 px-6 relative">
+  <div class="max-w-5xl mx-auto">
+    <div class="flex items-center gap-4 mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-white">
+        <span class="text-cyan-400 font-mono text-lg mr-2">03.</span>Projects
+      </h2>
+      <div class="flex-1 h-px bg-gradient-to-r from-cyan-400/50 to-transparent"></div>
+    </div>
+
+    <div class="space-y-16">
+      {projects.map((project, index) => (
+        <div class={`group relative flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-center`}>
+          <div class="w-full md:w-1/2 relative overflow-hidden rounded-lg border border-gray-800 group-hover:border-cyan-400/50 transition-colors">
+            <div class="aspect-video bg-gradient-to-br from-[#1A1F2E] to-[#0D1321] flex items-center justify-center">
+              <span class="text-7xl font-bold text-cyan-400/20">{project.title.charAt(0)}</span>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0E17] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          </div>
+
+          <div class="w-full md:w-1/2 space-y-4">
+            <p class="font-mono text-cyan-400 text-sm">Featured Project</p>
+            <h3 class="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+              {project.title}
+            </h3>
+            <p class="text-gray-400 leading-relaxed">
+              {project.description}
+            </p>
+            <div class="flex flex-wrap gap-2">
+              {project.tags.map((tag) => (
+                <span class="px-3 py-1 text-xs font-mono bg-cyan-400/10 text-cyan-400 rounded-full">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <a href={project.link} class="inline-flex items-center gap-2 text-gray-300 hover:text-cyan-400 transition-colors mt-4 group/link">
+              <span>View Project</span>
+              <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

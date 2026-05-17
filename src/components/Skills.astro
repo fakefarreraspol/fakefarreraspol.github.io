@@ -1,0 +1,87 @@
+---
+interface Skill {
+  name: string;
+  icon: string;
+}
+
+interface Props {
+  languages?: Skill[];
+  tools?: Skill[];
+}
+
+const {
+  languages = [
+    { name: "JavaScript", icon: "JS" },
+    { name: "TypeScript", icon: "TS" },
+    { name: "Python", icon: "PY" },
+    { name: "Java", icon: "JV" },
+    { name: "HTML", icon: "<>" },
+    { name: "CSS", icon: "#" }
+  ],
+  tools = [
+    { name: "React", icon: "R" },
+    { name: "Node.js", icon: "N" },
+    { name: "Git", icon: "G" },
+    { name: "Docker", icon: "D" },
+    { name: "VS Code", icon: "VS" },
+    { name: "Figma", icon: "F" }
+  ]
+}: Props = Astro.props;
+---
+
+<section id="skills" class="py-24 px-6 relative bg-[#0D1321]/50">
+  <div class="max-w-5xl mx-auto">
+    <div class="flex items-center gap-4 mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-white">
+        <span class="text-cyan-400 font-mono text-lg mr-2">02.</span>Skills
+      </h2>
+      <div class="flex-1 h-px bg-gradient-to-r from-cyan-400/50 to-transparent"></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12">
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-6 font-mono flex items-center gap-3">
+          <span class="w-3 h-3 bg-cyan-400 rounded-full"></span>
+          Languages
+        </h3>
+        <div class="grid grid-cols-2 gap-4">
+          {languages.map((lang) => (
+            <div class="group relative overflow-hidden rounded-lg border border-gray-800 hover:border-cyan-400/50 transition-all duration-300">
+              <div class="absolute inset-0 bg-gradient-to-br from-cyan-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div class="relative p-4 flex items-center gap-4">
+                <span class="font-mono text-cyan-400 text-sm bg-cyan-400/10 px-2 py-1 rounded">
+                  {lang.icon}
+                </span>
+                <span class="text-gray-300 group-hover:text-white transition-colors">
+                  {lang.name}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-6 font-mono flex items-center gap-3">
+          <span class="w-3 h-3 bg-cyan-400 rounded-full"></span>
+          Tools & Frameworks
+        </h3>
+        <div class="grid grid-cols-2 gap-4">
+          {tools.map((tool) => (
+            <div class="group relative overflow-hidden rounded-lg border border-gray-800 hover:border-cyan-400/50 transition-all duration-300">
+              <div class="absolute inset-0 bg-gradient-to-br from-cyan-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div class="relative p-4 flex items-center gap-4">
+                <span class="font-mono text-cyan-400 text-sm bg-cyan-400/10 px-2 py-1 rounded">
+                  {tool.icon}
+                </span>
+                <span class="text-gray-300 group-hover:text-white transition-colors">
+                  {tool.name}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

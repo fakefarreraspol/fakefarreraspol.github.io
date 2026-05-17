@@ -1,0 +1,91 @@
+---
+interface Experience {
+  type: "work" | "education";
+  title: string;
+  company: string;
+  period: string;
+  description: string;
+}
+
+interface Props {
+  experiences?: Experience[];
+}
+
+const {
+  experiences = [
+    {
+      type: "work",
+      title: "Junior Developer Intern",
+      company: "Tech Startup Inc.",
+      period: "Jun 2023 - Aug 2023",
+      description: "Assisted in developing web applications using React and Node.js. Collaborated with senior developers on code reviews and implemented new features for the company's main product."
+    },
+    {
+      type: "education",
+      title: "B.S. Computer Science",
+      company: "University of Technology",
+      period: "Sep 2020 - May 2024",
+      description: "Graduated with honors. Relevant coursework: Data Structures, Algorithms, Web Development, Database Systems, Software Engineering."
+    },
+    {
+      type: "work",
+      title: "Freelance Web Developer",
+      company: "Self-Employed",
+      period: "Jan 2023 - Present",
+      description: "Built responsive websites for local businesses. Managed client relationships and delivered projects on time."
+    },
+    {
+      type: "education",
+      title: "Full-Stack Bootcamp",
+      company: "Code Academy",
+      period: "Jun 2022 - Aug 2022",
+      description: "Intensive 12-week program covering modern web development technologies including React, Express, MongoDB, and deployment strategies."
+    }
+  ]
+}: Props = Astro.props;
+---
+
+<section id="experience" class="py-24 px-6 relative bg-[#0D1321]/50">
+  <div class="max-w-4xl mx-auto">
+    <div class="flex items-center gap-4 mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-white">
+        <span class="text-cyan-400 font-mono text-lg mr-2">04.</span>Experience
+      </h2>
+      <div class="flex-1 h-px bg-gradient-to-r from-cyan-400/50 to-transparent"></div>
+    </div>
+
+    <div class="relative">
+      <div class="absolute left-4 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400/50 via-cyan-400/20 to-transparent"></div>
+
+      <div class="space-y-12">
+        {experiences.map((exp, index) => (
+          <div class={`relative flex flex-col md:flex-row gap-8 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+            <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#0A0E17] border-2 border-cyan-400 z-10"></div>
+
+            <div class={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'} pl-12 md:pl-0`}>
+              <div class="p-6 rounded-lg border border-gray-800 hover:border-cyan-400/30 transition-colors group">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class={`px-3 py-1 text-xs font-mono rounded-full ${
+                    exp.type === 'work' 
+                      ? 'bg-cyan-400/10 text-cyan-400' 
+                      : 'bg-purple-400/10 text-purple-400'
+                  }`}>
+                    {exp.type === 'work' ? '💼 Work' : '🎓 Education'}
+                  </span>
+                  <span class="text-gray-500 text-sm font-mono">{exp.period}</span>
+                </div>
+                <h3 class="text-xl font-semibold text-white mb-1 group-hover:text-cyan-400 transition-colors">
+                  {exp.title}
+                </h3>
+                <p class="text-cyan-400/80 mb-3">{exp.company}</p>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                  {exp.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
