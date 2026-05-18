@@ -1,35 +1,74 @@
 ---
-const { name = "Pol Farreras", title = "Junior Software Engineer", summary = "Passionate about building clean, user-friendly applications. Eager to learn, grow, and contribute to meaningful projects." } = Astro.props;
+const {
+  name = "Pol Farreras",
+  title = "Junior Software Engineer",
+  summary = "Passionate about technology. Eager to learn, grow, and contribute to meaningful projects.",
+} = Astro.props;
 ---
 
-<section class="min-h-screen flex items-center justify-center relative overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-br from-[#0A0E17] via-[#0D1321] to-[#0A0E17]"></div>
-  <div class="absolute inset-0 opacity-5" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E');"></div>
+<section
+  class="min-h-screen flex items-center justify-center relative overflow-hidden"
+>
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-[#0A0E17] via-[#0D1321] to-[#0A0E17]"
+  >
+  </div>
+  <!-- <div
+    class="absolute inset-0 opacity-5"
+    style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E');"
+  >
+  </div>-->
 
-  <div class="relative z-10 max-w-4xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12">
-    <div class="relative group">
-      <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur opacity-25 group-hover:opacity-50 transition-opacity duration-500"></div>
-      <div class="relative w-48 h-48 md:w-56 md:h-56 rounded-full bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center text-white text-6xl font-bold border-2 border-cyan-400/30">
-        {name.charAt(0)}
+  <div
+    class="relative z-10 max-w-4xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12"
+  >
+    <div class="relative group w-48 h-48 md:w-56 md:h-56">
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur opacity-25 group-hover:opacity-50 transition-opacity duration-500"
+      >
+      </div>
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="w-[calc(100%-8px)] h-[calc(100%-8px)] rounded-full bg-[#0A0E17] z-10"></div>
+      </div>
+      <div class="relative w-full h-full rounded-full overflow-hidden border-2 border-cyan-400/30 z-20">
+        <img src="/PolFarreras.jpg" class="w-full h-full object-cover" />
       </div>
     </div>
 
     <div class="text-center md:text-left">
-      <p class="font-mono text-cyan-400 text-sm tracking-wider mb-3 animate-fade-in">HELLOOOO</p>
-      <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 animate-fade-in-up">
+      <p
+        class="font-mono text-cyan-400 text-sm tracking-wider mb-3 animate-fade-in"
+      >
+        HELLOOOO
+      </p>
+      <h1
+        class="text-5xl md:text-7xl font-bold text-white mb-4 animate-fade-in-up"
+      >
         {name}
       </h1>
-      <h2 class="text-xl md:text-2xl text-gray-400 mb-6 font-light animate-fade-in-up delay-100">
+      <h2
+        class="text-xl md:text-2xl text-gray-400 mb-6 font-light animate-fade-in-up delay-100"
+      >
         {title}
       </h2>
-      <p class="text-gray-300 text-lg max-w-xl leading-relaxed mb-8 animate-fade-in-up delay-200">
+      <p
+        class="text-gray-300 text-lg max-w-xl leading-relaxed mb-8 animate-fade-in-up delay-200"
+      >
         {summary}
       </p>
-      <div class="flex flex-wrap gap-4 justify-center md:justify-start animate-fade-in-up delay-300">
-        <a href="#projects" class="px-6 py-3 bg-cyan-500 text-[#0A0E17] font-semibold rounded hover:bg-cyan-400 transition-colors">
+      <div
+        class="flex flex-wrap gap-4 justify-center md:justify-start animate-fade-in-up delay-300"
+      >
+        <a
+          href="#projects"
+          class="px-6 py-3 bg-cyan-500 text-[#0A0E17] font-semibold rounded hover:bg-cyan-400 transition-colors"
+        >
           View Projects
         </a>
-        <a href="#contact" class="px-6 py-3 border border-cyan-400/50 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors">
+        <a
+          href="#contact"
+          class="px-6 py-3 border border-cyan-400/50 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors"
+        >
           Contact Me
         </a>
       </div>
@@ -37,24 +76,54 @@ const { name = "Pol Farreras", title = "Junior Software Engineer", summary = "Pa
   </div>
 
   <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-    <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+    <svg
+      class="w-6 h-6 text-cyan-400"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
     </svg>
   </div>
 </section>
 
 <style>
   @keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   @keyframes fade-in-up {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-  .animate-fade-in { animation: fade-in 0.6s ease-out forwards; }
-  .animate-fade-in-up { animation: fade-in-up 0.6s ease-out forwards; opacity: 0; }
-  .delay-100 { animation-delay: 0.1s; }
-  .delay-200 { animation-delay: 0.2s; }
-  .delay-300 { animation-delay: 0.3s; }
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
+    opacity: 0;
+  }
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
 </style>

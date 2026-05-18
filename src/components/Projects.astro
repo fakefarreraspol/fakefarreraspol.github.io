@@ -14,23 +14,18 @@ interface Props {
 const {
   projects = [
     {
-      title: "Task Manager App",
-      description: "A full-stack task management application with user authentication, drag-and-drop functionality, and real-time updates. Built with React and Node.js.",
-      image: "/project1.jpg",
-      tags: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-      link: "#"
-    },
-    {
-      title: "Weather Dashboard",
-      description: "A weather application that displays current conditions and forecasts using external APIs. Features include location search and responsive design.",
-      image: "/project2.jpg",
-      tags: ["JavaScript", "API", "CSS3", "HTML5"],
+      title: "Cupra Realtime",
+      description: "XR application in Unreal Engine as part of my internship at Cupra."+
+      "The application allows the user to load cars and scenarios dynamically and change parts of the vehicle."+
+      " Also viewing the car in VR (interior and exterior).",
+      image: "/project_pictures/cupra-logo.jpg",
+      tags: ["UnrealEngine", "C++", "XR"],
       link: "#"
     },
     {
       title: "Guardians of the Galaxy: Battle for the Universe",
-      description: "A mini e-commerce site with product listings, shopping cart functionality, and checkout process. Developed during a hackathon.",
-      image: "/project3.jpg",
+      description: "Top-Down shooter videogame made in a custom engine in C++ with a group of 30 people",
+      image: "/project_pictures/GuardiansOfTheGalaxy.png",
       tags: ["C++", "Maya", "Blender"],
       link: "#"
     }
@@ -52,7 +47,7 @@ const {
         <div class={`group relative flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-center`}>
           <div class="w-full md:w-1/2 relative overflow-hidden rounded-lg border border-gray-800 group-hover:border-cyan-400/50 transition-colors">
             <div class="aspect-video bg-gradient-to-br from-[#1A1F2E] to-[#0D1321] flex items-center justify-center">
-              <span class="text-7xl font-bold text-cyan-400/20">{project.title.charAt(0)}</span>
+              <img src={project.image} alt={project.title} class="w-full h-full object-cover" />
             </div>
             <div class="absolute inset-0 bg-gradient-to-t from-[#0A0E17] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </div>
