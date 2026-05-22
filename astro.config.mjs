@@ -8,6 +8,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  site: "https://fakefarreraspol.github.io/",
-  base: '/fakefarreraspol.github.io',
+  site: "https://fakefarreraspol.github.io/"
 });
