@@ -23,5 +23,9 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-.AGENTS.md
+
 .agents/
+.vscode/
+AGENTS.md
+skills-lock.json
+bun.lock
